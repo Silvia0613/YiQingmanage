@@ -17,13 +17,7 @@ public class SystemController {
     private IRoleService roleService;
 
     @Resource
-    private IClueService clueService;
-
-    @Resource
     private ICommentService commentService;
-
-    @Resource
-    private IGoodApplyService goodApplyService;
 
     @Resource
     private IDailyReportService dailyReportService;
@@ -42,9 +36,7 @@ public class SystemController {
     @RequestMapping(value="/index",method = RequestMethod.GET)
     public ModelAndView index(ModelAndView model){
         model.addObject("roleList", roleService.all().getData());
-        model.addObject("clueTotal", clueService.getClueTotal().getData());
         model.addObject("commentTotal", commentService.getCommentTotal().getData());
-        model.addObject("goodApplyTotal", goodApplyService.getGoodApplyTotal().getData());
         model.addObject("dailyReportTotal", dailyReportService.getDailyReportTotal().getData());
         model.addObject("newsTotal", newsService.getNewsTotal().getData());
         model.addObject("userTotal", userService.getUserTotal().getData());

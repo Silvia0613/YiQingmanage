@@ -1,11 +1,6 @@
 package com.yjq.programmer.enums;
 
-/**
- * @author 杨杨吖
- * @QQ 823208782
- * @WX yjqi12345678
- * @create 2022-01-22 13:16
- */
+
 public enum RoleEnum {
 
     USER("tWalUpvk","普通用户"),

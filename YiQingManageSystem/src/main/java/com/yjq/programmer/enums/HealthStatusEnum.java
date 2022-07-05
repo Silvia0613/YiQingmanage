@@ -1,11 +1,6 @@
 package com.yjq.programmer.enums;
 
-/**
- * @author 杨杨吖
- * @QQ 823208782
- * @WX yjqi12345678
- * @create 2022-02-28 21:39
- */
+
 public enum HealthStatusEnum {
 
     HEALTH(1,"健康"),

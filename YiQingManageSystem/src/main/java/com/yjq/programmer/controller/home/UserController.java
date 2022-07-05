@@ -25,12 +25,6 @@ public class UserController {
     private ICommentService commentService;
 
     @Resource
-    private IClueService clueService;
-
-    @Resource
-    private IGoodApplyService goodApplyService;
-
-    @Resource
     private IDailyReportService dailyReportService;
 
     /**
@@ -53,30 +47,6 @@ public class UserController {
     public ModelAndView dailyReport(ModelAndView model, HttpServletRequest request){
         model.addObject("dailyReportList", dailyReportService.getDailyReportByUserId(request).getData());
         model.setViewName("home/user/daily-report");
-        return model;
-    }
-
-    /**
-     * 前台我的线索上报页面
-     * @param model
-     * @return
-     */
-    @RequestMapping(value="/clue",method = RequestMethod.GET)
-    public ModelAndView clue(ModelAndView model, HttpServletRequest request){
-        model.addObject("clueList", clueService.getClueByUserId(request).getData());
-        model.setViewName("home/user/clue");
-        return model;
-    }
-
-    /**
-     * 前台我的物资申请页面
-     * @param model
-     * @return
-     */
-    @RequestMapping(value="/good-apply",method = RequestMethod.GET)
-    public ModelAndView goodApply(ModelAndView model, HttpServletRequest request){
-        model.addObject("goodApplyList", goodApplyService.getGoodApplyByUserId(request).getData());
-        model.setViewName("home/user/good-apply");
         return model;
     }
 

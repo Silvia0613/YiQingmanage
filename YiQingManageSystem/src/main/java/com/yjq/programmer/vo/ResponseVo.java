@@ -4,9 +4,6 @@ import com.yjq.programmer.bean.CodeMsg;
 
 /**
  * 公共返回类
- * @author 82320
- *
- * @param <T>
  */
 public class ResponseVo<T> {
 

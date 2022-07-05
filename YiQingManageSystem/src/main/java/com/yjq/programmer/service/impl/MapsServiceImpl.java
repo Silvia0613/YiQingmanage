@@ -23,12 +23,7 @@ import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author 杨杨吖
- * @QQ 823208782
- * @WX yjqi12345678
- * @create 2022-02-25 8:33
- */
+
 @Service
 @Transactional
 public class MapsServiceImpl implements IMapsService {

@@ -40,12 +40,6 @@ public class UserServiceImpl implements IUserService {
     private DailyReportMapper dailyReportMapper;
 
     @Resource
-    private ClueMapper clueMapper;
-
-    @Resource
-    private GoodApplyMapper goodApplyMapper;
-
-    @Resource
     private CommentMapper commentMapper;
 
     @Resource
@@ -182,18 +176,6 @@ public class UserServiceImpl implements IUserService {
         if(CommonUtil.isEmpty(id)){
             return ResponseVo.errorByMsg(CodeMsg.DATA_ERROR);
         }
-        // 删除该用户的发布的线索信息
-        ClueExample clueExample = new ClueExample();
-        clueExample.createCriteria().andUserIdEqualTo(id);
-        clueMapper.deleteByExample(clueExample);
-        // 删除该用户的日常打卡信息
-        DailyReportExample dailyReportExample = new DailyReportExample();
-        dailyReportExample.createCriteria().andUserIdEqualTo(id);
-        dailyReportMapper.deleteByExample(dailyReportExample);
-        // 删除该用户的物资申请信息
-        GoodApplyExample goodApplyExample = new GoodApplyExample();
-        goodApplyExample.createCriteria().andUserIdEqualTo(id);
-        goodApplyMapper.deleteByExample(goodApplyExample);
         // 删除该用户的评论信息
         CommentExample commentExample = new CommentExample();
         commentExample.createCriteria().andUserIdEqualTo(id);

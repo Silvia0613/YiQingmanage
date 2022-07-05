@@ -1,11 +1,6 @@
 package com.yjq.programmer.enums;
 
-/**
- * @author 杨杨吖
- * @QQ 823208782
- * @WX yjqi12345678
- * @create 2022-02-20 11:21
- */
+
 public enum GoodApplyStateEnum {
 
     WAIT(1,"待审核"),

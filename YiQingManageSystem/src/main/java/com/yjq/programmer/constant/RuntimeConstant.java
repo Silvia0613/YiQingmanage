@@ -6,7 +6,7 @@ package com.yjq.programmer.constant;
 public class RuntimeConstant {
 
     //上传文件根路径
-    public static String BASE_UPLOAD_PHOTO_PATH = "E:\\eclipse_project\\YiQingManageSystem\\YiQingManageSystem\\src\\main\\webapp\\resources\\upload\\";
+    public static String BASE_UPLOAD_PHOTO_PATH = "D:\\java_project\\YiQingManageSystem\\src\\main\\webapp\\resources\\upload\\";
 
     // 前台登录用户Session名称
     public static String HOME_USER = "HOME_USER";
